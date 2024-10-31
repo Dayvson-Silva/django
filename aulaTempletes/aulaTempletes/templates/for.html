@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <style>
+         .container {
+            font-family: 'Courier New', Courier, monospace;
+            text-align: center; 
+            height: 100vh;  
+            justify-content: center; 
+            align-items: center; 
+            background-color: green;
+            font-weight: bold;
+        }
+        .loja{
+            background-color: aqua;
+        }
+    
+    </style>
+<div class="container">
+
+    <h1 class="loja"> LOJA DO BIU </h1>
+    
+    {% for i in loja %}
+        {% if i.stock > 0 %}
+            <li>{{i.name}}</li>
+            <li>{{i.description}}</li>
+            <li>{{i.price}}</li>
+            <li>{{i.stock}}</li><br>
+         {% endif %}
+    {% endfor %}
+</div>
+</body>
+</html>
