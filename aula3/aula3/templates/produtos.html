@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+    {% block content %}
+        <div class="pro">
+
+            <h2>Produtos</h2>
+            
+            {% for produto in produtos %}
+            
+            <p class="pro1">
+                {{produto.name}} - {{produto.price}}
+                
+            </p>
+        </div>
+    
+        {% endfor %}
+    {% endblock %}

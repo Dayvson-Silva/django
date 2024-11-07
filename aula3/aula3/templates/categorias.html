@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="cat">
+
+        <h2>Categorias</h2>
+        
+        {% for categoria in categorias %}
+        
+        <p class="cat1">
+            {{categoria}} 
+            
+        </p>
+    </div>
+     
+    {% endfor %}
+{% endblock %}
