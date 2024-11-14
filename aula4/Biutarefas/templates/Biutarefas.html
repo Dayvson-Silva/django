@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarefas do biu </title>
+</head>
+<body>
+
+
+{% for tarefa in tarefas %}
+    <p>{{ tarefa }}</p>
+    <div>
+        <ul>
+            <li>{{tarefa.name}}</li>
+            <li>{{tarefa.description}}</li>
+            <li>{{tarefa.date}}</li>
+           
+        </ul>
+    </div>
+
+
+{% endfor %}
+    
+</body>
+</html>
