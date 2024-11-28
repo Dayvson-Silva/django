@@ -22,3 +22,10 @@ def clean_nome(self):
     if len(nome) < 3 :
         raise forms.ValidationError("errou otario tem que ter 3 palavras ")
     return nome
+
+# ISSO É PARA COLOCAR EM BIUTAREFAS
+def clean_descricao(self):
+    descricao = self.cleaned_data.get('descricao')
+    if descricao and len(descricao) < 10 :
+        raise forms.ValidationError("errou otario tem que ter 10 palavras ")
+    return descricao
