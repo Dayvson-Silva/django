@@ -16,3 +16,9 @@ class ProdutoForm(forms.Form):
             'preco': 'Preco',
             'estoque': 'Estoque'
         }
+# VALIDAÇÃO DE ERRO 
+def clean_nome(self):
+    nome = self.cleaned_data.get('nome')
+    if len(nome) < 3 :
+        raise forms.ValidationError("errou otario tem que ter 3 palavras ")
+    return nome
